@@ -445,6 +445,7 @@ class Graph():
         :math:`v_0, \ldots, v_{n-1}`, the adjacency matrix 
         of :math:`G(V, E)` is an 
         :math:`n`-dimensional matrix :math:`A`, defined as follows:        
+
         .. math::
             A_{i,j} = \begin{cases}
                 1, & \text{if } v_i \text{ is adjacent to } v_j,\\
@@ -462,9 +463,6 @@ class Graph():
         the weights of the edges. In general, the weight is a non-zero
         real number. In Hiperwalk, :math:`A` can be an arbitrary
         Hermitian matrix.        
-
-        .. todo::
-            Add other return types depending on the stored matrix type.
         """
         data = np.ones(len(self._adj_matrix.indices), dtype=np.int8)
         indices = self._adj_matrix.indices

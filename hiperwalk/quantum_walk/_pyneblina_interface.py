@@ -212,9 +212,8 @@ def _send_sparse_matrix(M, is_complex):
     #   In addition, there should be a way to
     #   return the matrix and automatically
     #   convert to a matrix of float or of complex numbers accordingly.
+    smat = neblina.sparse_matrix_new(n, n, neblina.COMPLEX) if is_complex else neblina.sparse_matrix_new(n, n, neblina.FLOAT)
     # smat = neblina.sparse_matrix_new(n, n, neblina.COMPLEX)
-    #     if is_complex else neblina.sparse_matrix_new(n, n, neblina.FLOAT)
-    smat = neblina.sparse_matrix_new(n, n, neblina.COMPLEX)
     
     # inserts elements into neblina sparse matrix
     row = 0
